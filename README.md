@@ -1,6 +1,6 @@
 # Projet MEAN Stack
 
-Bienvenue sur le projet des vidéos YouTube te montrant comment créer un projet avec la MEAN Stack.
+Bienvenue sur le projet de la [vidéo YouTube](https://youtu.be/taL33zP5TQw) te montrant comment créer un projet avec la MEAN Stack.
 Cette partie du projet représente la partie API REST de notre stack.
 
 ## Récupération et lancement du projet
