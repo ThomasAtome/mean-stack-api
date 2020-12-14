@@ -37,7 +37,7 @@ const SaleSchema = new mongoose.Schema({
         type: Boolean,
         required: true
     },
-    purchasedMethod: {
+    purchaseMethod: {
         type: String,
         required: true
     }
