@@ -1,13 +1,17 @@
 require('dotenv').config();
 
 const express = require('express'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    cors = require('cors');
 
 // Create app
 const app = express();
 
 // Define express body parser
 app.use(express.json());
+
+// Prevent CORS Policy Errors
+app.use(cors());
 
 // Connect the DB
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`);

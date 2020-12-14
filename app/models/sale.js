@@ -28,7 +28,6 @@ const SaleSchema = new mongoose.Schema({
             type: String,
             required: true
         },
-
         satisfaction: {
             type: Number,
             required: true
