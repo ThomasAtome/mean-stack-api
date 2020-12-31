@@ -1,17 +1,18 @@
 const express = require('express'),
     saleRoutes = express.Router(),
-    SaleController = require('../controllers/sale');
+    SaleController = require('../controllers/sale'),
+    isAuth = require('../../config/passport').checkIsAuth;
 
 module.exports = (app) => {
 
-    saleRoutes.get('/sale/:id', SaleController.getById);
+    saleRoutes.get('/sale/:id', isAuth, SaleController.getById);
 
-    saleRoutes.post('/sale', SaleController.add);
+    saleRoutes.post('/sale', isAuth, SaleController.add);
 
-    saleRoutes.put('/sale/:id', SaleController.updateById);
+    saleRoutes.put('/sale/:id', isAuth, SaleController.updateById);
 
-    saleRoutes.delete('/sale/:id', SaleController.deleteById);
+    saleRoutes.delete('/sale/:id', isAuth, SaleController.deleteById);
 
-    app.use('/', saleRoutes)
+    app.use('/', saleRoutes);
 
 };
