@@ -39,7 +39,7 @@ module.exports.localStrategy = new LocalStrategy({usernameField: 'email'}, (user
 });
 
 const jwtOptions = {
-    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+    jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme('JWT'),
     secretOrKey: process.env.SECRET_PASS
 };
 
